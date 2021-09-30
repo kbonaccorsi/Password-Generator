@@ -1,28 +1,27 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+//https://www.w3schools.com/html/html_charset.asp
 
+// Generator functions
 
-function generatePassword () {
-  const length = [];
-  for (var i=8; i < 129; i++){
-      length.push(i);
-  };
-  const lowercase = "qwertyuiopasdfghjklzxcvbnm".split();
-  const uppercase = "QWERTYUIOPASDFGHJKLZXCVBNM".split();
-  const numeric = "1234567890".split();
-  const specialCharacter = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+function lower() {
+  const lowercase = "qwertyuiopasdfghjklzxcvbnm";
+  return lowercase [Math.floor(Math.random() * lowercase.length)];
 }
 
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+function upper() {
+  const uppercase = "QWERTYUIOPASDFGHJKLZXCVBNM";
+  return uppercase [Math.floor(Math.random() * uppercase.length)];
 }
 
+function numeric() {
+  const digits = "1234567890";
+  return digits [Math.floor(Math.random() * digits.length)];
+}
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+function specialCharacter() {
+  const characters = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+  return characters [Math.floor(Math.random() * characters.length)];
+}
+console.log(lower());
+console.log(upper());
+console.log(numeric());
+console.log(specialCharacter())

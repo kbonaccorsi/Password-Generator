@@ -24,13 +24,7 @@ function generatePassword() {
 
   
   
-  var characterType = {
-  length: false,
-  lowercase: false,
-  uppercase: false,
-  numeric: false,
-  specialCharacter: false,
-  }
+  
   
   if ( === true) {
     console.log("choose characters to include")
