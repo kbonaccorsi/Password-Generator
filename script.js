@@ -14,7 +14,7 @@ function generatePassword() {
 
   var length = prompt("Choose a password length between 8 and 128 characters.");
 // if else statement determining what will happen when parameters are true or false
-  if (length <= 8 || length >= 128) {
+  if (length < 8 || length > 128) {
     alert("Choose a password length between 8 and 128 characters.");
     generatePassword();
   console.log()
