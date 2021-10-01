@@ -43,6 +43,8 @@ generated password shows in alert OR written to the page
     password is generated -> password written to the page
 
 
-URL:
+URL: https://kbonaccorsi.github.io/Password-Generator/
 
 Screenshot:
+![image](https://user-images.githubusercontent.com/86372011/135567001-0b41fcf6-2496-45a0-9bbb-17a3b0155e8c.png)
+
