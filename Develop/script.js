@@ -6,19 +6,22 @@ const lowercase = "qwertyuiopasdfghjklzxcvbnm".split("");
 const uppercase = "QWERTYUIOPASDFGHJKLZXCVBNM".split ("");
 const numeric = "1234567890".split("");
 const symbol = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~".split("");
-var passwordArr = [];
+
 
 //function that will generate a password based on multiple inputs from the user
 function generatePassword() {
+  let passwordArr = [];
 
   var length = prompt("Choose a password length between 8 and 128 characters.");
 
   if (length <= 8 || length >= 128) {
     alert("Choose a password length between 8 and 128 characters.");
     generatePassword();
+  console.log()
   } else {
     
     var lowercasePrompt = confirm("Do you want your password to contain lowercase characters?");
+  }
     if (lowercasePrompt === true) {
       alert("Your password will contain lowercase characters.");
       // add lowercase characters to the array
@@ -53,22 +56,18 @@ function generatePassword() {
     } else {
       alert("Your password will NOT contain symbol characters.");
     };
-  };
+  //};
   
-  
-  passwordArr= "";
-
-
-return passwordArr[Math.floor(Math.random() * passwordArr.length)];
-
-
-
+let password= "";
+for (let i=0; i<length; i++) {
+var randomIndex = Math.floor(Math.random()* passwordArr.length)
+var randomCharacter = passwordArr[randomIndex]
+password += randomCharacter
+}
   //loop through the passwordArr
   //add each character which got randomized to the generatePassword arr
-  
-
+return password
 };
-
 
 // Write password to the #password input
 function writePassword() {
@@ -76,7 +75,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
