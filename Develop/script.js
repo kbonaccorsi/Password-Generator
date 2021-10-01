@@ -13,7 +13,7 @@ function generatePassword() {
   let passwordArr = [];
 
   var length = prompt("Choose a password length between 8 and 128 characters.");
-
+// if else statement determining what will happen when parameters are true or false
   if (length <= 8 || length >= 128) {
     alert("Choose a password length between 8 and 128 characters.");
     generatePassword();
@@ -51,21 +51,21 @@ function generatePassword() {
     var symbolPrompt = confirm("Do you want your password to contain symbol characters?");
     if (symbolPrompt === true) {
       alert("Your password will contain symbol characters.");
-      // add numeric characters to the array
+      // add symbol characters to the array
     passwordArr.push(...symbol);
     } else {
       alert("Your password will NOT contain symbol characters.");
     };
-  //};
-  
+
+    //password type will be string  
 let password= "";
+//for loop using random characters and the user decided length of password
 for (let i=0; i<length; i++) {
 var randomIndex = Math.floor(Math.random()* passwordArr.length)
 var randomCharacter = passwordArr[randomIndex]
 password += randomCharacter
 }
-  //loop through the passwordArr
-  //add each character which got randomized to the generatePassword arr
+//puts the password on the page
 return password
 };
 
